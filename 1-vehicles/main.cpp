@@ -38,7 +38,7 @@ public:
 
     Bus(): Bus(0, 0, 0, 0, 0, 0, new vector<uint16_t>, 0) {}
 
-    list<uint16_t> generate_route(uint16_t start) {
+    [[nodiscard]] list<uint16_t> generate_route(uint16_t start) const {
         auto res = new list<uint16_t>(stops->begin(), stops->end());
         res->sort();
         res->unique();
